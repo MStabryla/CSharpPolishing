@@ -44,7 +44,7 @@ public class AsyncAwaitProgram
 
             async Task PostTask(int i)
             {
-                Console.WriteLine($"Query {i}");
+                Console.WriteLine($"Post Query {i}");
                 var task = await connector.RetrieveData($"/posts/{i}");
                 output += $"\n---\n{ObjToStringOutput(task)}\n---\n";
             }
@@ -60,7 +60,7 @@ public class AsyncAwaitProgram
 
             async Task PostCommentTask(int i)
             {
-                Console.WriteLine($"Query {i}");
+                Console.WriteLine($"Comment Query {i}");
                 var task = await connector.RetrieveData($"/posts/{i}/comments");
                 output += $"\n---\n{ObjToStringOutput(task)}\n---\n";
             }
